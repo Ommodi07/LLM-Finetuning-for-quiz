@@ -13,7 +13,7 @@ st.set_page_config(
 )
 
 
-def _retro_css() -> str:
+def _css() -> str:
 	return """
 	<style>
 	@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
@@ -217,13 +217,13 @@ def _generate_quiz(model, tokenizer, prompt: str, temperature: float, top_p: flo
 	return response
 
 
-st.markdown(_retro_css(), unsafe_allow_html=True)
+st.markdown(_css(), unsafe_allow_html=True)
 
 st.markdown(
 	"""
 	<div class="retro-header">
-		<div class="retro-title">RETRO QUIZ FORGE</div>
-		<div class="retro-subtitle">Generate neon-bright quizzes from your LoRA-powered model.</div>
+		<div class="retro-title">QUIZ FORGE</div>
+		<div class="retro-subtitle">Generate neon-bright quizzes from LoRA-powered model.</div>
 	</div>
 	""",
 	unsafe_allow_html=True,
